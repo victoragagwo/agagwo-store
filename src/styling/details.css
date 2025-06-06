@@ -1,0 +1,127 @@
+.details-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  padding: 2rem 0;
+}
+
+.details-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .details-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.details-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  margin: 0 auto;
+}
+
+.details-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.details-category {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.details-price {
+  color: #16a34a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.details-description {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.details-addcart {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.details-addcart:hover {
+  background: #1d4ed8;
+}
+
+.details-loading {
+  font-size: 1.25rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.details-back {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-block;
+}
+.details-back:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.details-toast-notification {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.12);
+  z-index: 9999;
+  animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
+  10% { opacity: 1; transform: translateX(-50%) translateY(0);}
+  90% { opacity: 1; transform: translateX(-50%) translateY(0);}
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
+}
